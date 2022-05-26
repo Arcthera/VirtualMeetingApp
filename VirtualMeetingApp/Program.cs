@@ -6,7 +6,7 @@
         {
             if (!File.Exists("people.json"))
             {
-                Menu.Output("Please make sure that people.json file exists in the current directory!");
+                Menu.Output($"Please make sure that people.json file exists in the current directory! ({Directory.GetCurrentDirectory()})");
                 Menu.Output("Example of people.json entry:\n[{\n\t\"name\": \"Mazvydas Janiskevicius\"\n\t\"pin\":\"1234\"\n}]");
                 Environment.Exit(0);
             }
