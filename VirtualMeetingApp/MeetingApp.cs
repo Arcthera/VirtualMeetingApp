@@ -240,6 +240,13 @@ namespace VirtualMeetingApp
             Meeting selectedMeeting;
             Person selectedPerson;
 
+            if(Database.Meetings.Count == 0)
+            {
+                Menu.Output("There are currently no meetings scheduled. Please create one first!");
+                Menu.WaitForInput();
+                return;
+            }
+
             selectedMeeting = SelectMeeting();
             selectedPerson = SelectPerson();
 
@@ -264,6 +271,13 @@ namespace VirtualMeetingApp
         {
             Meeting selectedMeeting;
             Person selectedPerson;
+
+            if (Database.Meetings.Count == 0)
+            {
+                Menu.Output("There are currently no meetings scheduled. Please create one first!");
+                Menu.WaitForInput();
+                return;
+            }
 
             selectedMeeting = SelectMeeting();
             selectedPerson = SelectPerson();
